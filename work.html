@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twiscode</title>
+    <link rel="shortcut icon" href="assets/favicon.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border-2 border-bottom" style="border-color: E5E5E5;">
+        <div class="container d-block">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo twiscode.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse float-end mt-2" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-2">
+                        <a class="nav-link fw-bold" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link active fw-bold" aria-current="page" href="#">Work</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link fw-bold" href="service.html">Service</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link fw-bold" href="customer.html">Our Customer</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link fw-bold" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link fw-bold" href="career.html">Career</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link fw-bold" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- How We Work Start -->
+
+    <div class="container my-5 pt-5">
+        <div class="row">
+            <div class="col-5 offset-1">
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center justify-content-end pe-0">
+                        <img src="assets/Line 3.png">
+                    </div>
+                    <div class="col-6 p-5 position-relative box">
+                        <h5 class="mb-5 pb-4 fw-bold">Discuss</h5>
+                        <h1 class="display-3 fw-bold position-absolute bottom-0 end-0" style="color: #9F9F9F;">01</h1>
+                    </div>
+                    <div class="col-6 p-5 position-relative box">
+                        <h5 class="mb-5 pb-4 fw-bold">Planing</h5>
+                        <h1 class="display-3 fw-bold position-absolute bottom-0 end-0" style="color: #9F9F9F;">02</h1>
+                    </div>
+                    <div class="col-6 p-5 position-relative box">
+                        <h5 class="mb-5 pb-4 fw-bold">Coding</h5>
+                        <h1 class="display-3 fw-bold position-absolute bottom-0 end-0" style="color: #9F9F9F;">03</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <h1 class="display-2 fw-bold ps-5" style="white-space: pre-line;">How
+                    We Work?
+                </h1>
+                <p class="ps-5 mt-4 fs-4" style="white-space: pre-line;">Let's discuss what projects
+                    you have in mind
+                </p>
+                <button class="btn btn-dark ms-5 mt-3 px-5">More</button>
+            </div>
+        </div>
+    </div>
+    <!-- How We Work End -->
+
+    <!-- Footer Start -->
+
+    <footer class="container-fluid border-3 border-top position-fixed" style="border-color: E5E5E5; bottom: 0;">
+        <div class="container">
+            <h6 class="py-3 fw-bold text-center">Twiscode Pte. Ltd. | PT. Dapur Rumah Sejahtera</h6>
+        </div>
+    </footer>
+
+    <!-- Footer End -->
+    <script>
+        const boxes = document.querySelectorAll(".box");
+      let currentIndex = 0;
+      let gradientPosition = 0;
+
+      function changeColor() {
+        gradientPosition = (gradientPosition + 100) % 200;
+        boxes[
+          currentIndex
+        ].style.background = `linear-gradient(to bottom, #9FD685, #F9DD03)`;
+        boxes[currentIndex].style.backgroundPosition = `0 ${gradientPosition}%`;
+        boxes[(currentIndex + 2) % 3].style.background =
+          "linear-gradient(to bottom, #E5E5E5, #FFFFFF)";
+        currentIndex = (currentIndex + 1) % 3;
+      }
+
+      // Mulai transisi warna secara otomatis setiap beberapa detik
+      setInterval(changeColor, 2000);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

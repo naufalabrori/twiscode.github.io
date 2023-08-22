@@ -1,0 +1,5 @@
+.box {
+    background: linear-gradient(to bottom, #E5E5E5, #FFFFFF);
+    background-position: 0 0;
+    transition: background 0.5s ease;
+}
